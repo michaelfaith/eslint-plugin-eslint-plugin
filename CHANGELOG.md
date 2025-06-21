@@ -21,6 +21,126 @@
 * update dependency markdownlint-cli to ^0.38.0 ([#410](https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/410)) ([6b53c5b](https://github.com/eslint-community/eslint-plugin-eslint-plugin/commit/6b53c5b7b8bc9e19dcb86796ab29019f89c449fc))
 * update dependency markdownlint-cli to ^0.39.0 ([#431](https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/431)) ([f005a2c](https://github.com/eslint-community/eslint-plugin-eslint-plugin/commit/f005a2c0231b8b77f6862dca81b4a6e3099e0493))
 
+## [7.0.0](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/compare/v6.5.0...v7.0.0) (2025-06-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* require Node 20, 22, 24+ ([#529](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/529))
+* remove eslint v8 / eslintrc support and remove `flat/` prefix from configs ([#528](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/528))
+* move to ESM only ([#516](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/516))
+* change test-case-property-ordering to add supports languageOptions ([#406](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/406))
+* add `defaultOptions` to meta-property-ordering ([#461](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/461))
+* remove consistent-output from recommended ([#462](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/462))
+* Add missing `deprecated`/`replacedBy` properties to `meta-property-ordering` rule ([#320](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/320))
+* requires node >= 18 & eslint >= 8.23.0 ([#456](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/456))
+* Update `no-missing-placeholders` and `no-unused-placeholders` to handle messageIds ([#252](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/252))
+* Requires ESLint@^7.x
+
+### Breaking
+
+* drop eslint &lt; 7 & node.js < 10 ([#95](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/95)) ([59ddffc](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/59ddffcd0c4f1e293883838264daa7a29da04db7))
+
+
+### Features
+
+* add `defaultOptions` to meta-property-ordering ([#461](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/461)) ([ff28db3](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/ff28db3dc1a6f06f5eca2225570870904acb5851)), closes [#430](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/430)
+* add `name` to flat configs ([#459](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/459)) ([dcb794f](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/dcb794fcad7105e347eacb9c7a60e4c668cab205))
+* add `require-meta-schema-description` rule ([#490](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/490)) ([875200b](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/875200b5c87348d10284c7686648e495f392a476))
+* Add missing `deprecated`/`replacedBy` properties to `meta-property-ordering` rule ([#320](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/320)) ([1692fe2](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/1692fe23cbe707f7d9694ca2b2f10068194b36b5))
+* Add new `no-meta-schema-default` rule ([#503](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/503)) ([dbd96b2](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/dbd96b288dcb19e3ab0433169266162c3cff0c60))
+* Add new `require-meta-default-options` rule ([#502](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/502)) ([13e625a](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/13e625a2d0273dcc14911b24ea809bf5f46d00c1))
+* Add new rule `no-meta-replaced-by` ([105f05d](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/105f05d73ebed88d2c78ae75cb6f3c6ab8c21aa9))
+* Add new rules `no-missing-message-ids` and `no-unused-message-ids` ([#254](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/254)) ([067e8aa](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/067e8aa35d916e97e5091be3cd21f09ff00d77ed))
+* add no-property-in-node rule ([#433](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/433)) ([d2b9372](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/d2b9372279d39b9ca9db2c0874b7dfab6a19c208))
+* add require-meta-docs-recommended rule ([#447](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/447)) ([2370b46](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/2370b46b20971149b12901d36c7927e0d232b9f9))
+* Add suggestions to `require-meta-docs-recommended` rule ([#500](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/500)) ([8fda55a](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/8fda55a9a283d5cbb6c8343f123357e9be1e85d7))
+* change test-case-property-ordering to add supports languageOptions ([#406](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/406)) ([0dd0857](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/0dd08577147863f923f5587d72e9a67a5c605f9c))
+* detect function-style rules exported using a variable ([#235](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/235)) ([e388a3a](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/e388a3a349769fc0f412b68090401079893218f2))
+* Detect nested test cases ([#249](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/249)) ([b33aa00](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/b33aa0025f5f6bce41f1799f00aecb5778bca720))
+* eslint-utils =&gt; @eslint-community/eslint-utils ([#474](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/474)) ([6db5604](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6db5604b41341dc0f41cc99f81edc0913aa661ac))
+* handle properties behind spread syntax in `require-meta-*` rules ([#251](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/251)) ([abefd1e](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/abefd1efc9d9adc0142b2c7527af8d5f3ec60377))
+* move to ESM only ([#516](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/516)) ([9cd5af8](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/9cd5af882bf992a63d05a9b21dd4366c384b5150))
+* no-property-in-node add additionalNodeTypeFiles option ([#484](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/484)) ([6cdef14](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6cdef146cea7270364b254f23e04786a89c65dfe))
+* preparing for eslint v9 ([#400](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/400)) ([35e14cd](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/35e14cd7bc1fd865fa11efd955afe600ef2bbc22))
+* re-export flat configs "flat/*" ([#453](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/453)) ([e3b27e2](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/e3b27e26d7d1c864b04a162b38d9384a16bff23a))
+* remove consistent-output from recommended ([#462](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/462)) ([c27e18b](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/c27e18b16c83df011b8a8f997aa7fd0622889694)), closes [#284](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/284)
+* remove eslint v8 / eslintrc support and remove `flat/` prefix from configs ([#528](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/528)) ([03cf3d7](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/03cf3d7b857561d24fd0bfdbeeb926cb6bc02d10))
+* require Node 20, 22, 24+ ([#529](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/529)) ([b2994c7](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/b2994c73ba71576cdd96d95469613b4d573740c2))
+* requires node &gt;= 18 & eslint >= 8.23.0 ([#456](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/456)) ([4adeb6c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/4adeb6ccfee488819f7300746a3e2551cf44a961))
+* support `eslint.config.js` ([#347](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/347)) ([6f6b1f4](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6f6b1f420d6d18ac13d023f71ce0512caed7cb0e))
+* support named exports in ESM/TS ([#449](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/449)) ([aa15471](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/aa15471d4a8dc51a574f646f000d665854d15942))
+* Update `no-missing-placeholders` and `no-unused-placeholders` to handle messageIds ([#252](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/252)) ([047b0b5](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/047b0b56bd61c88122518644e8a6f9b5ab7255bb))
+
+
+### Bug Fixes
+
+* `require-meta-schema`: Fix false positive ([#111](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/111)) ([9f4f461](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/9f4f461969b0f89d40219198423b39eea7b63d1e))
+* allow additional schema types in require-meta-schema ([#277](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/277)) ([5bf0648](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/5bf0648f50213fa30e9b623a8db376f41a3af411))
+* allow to use generator function as fix in fixer-return ([#75](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/75)) ([7556633](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/7556633ce349ec78a90fe7986d6090726e84c048))
+* Avoid crash when provided suggestions array has non-object ([#216](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/216)) ([c3d85ab](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/c3d85ab53b49a3b3eccd817322168c0158e306e1))
+* Avoid crash with non-static value of `hasSuggestions` in `require-meta-has-suggestions` rule ([#163](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/163)) ([5c83cd9](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/5c83cd9d0b49adfc408936511b560f957d3cbbcb))
+* Change autofix to suggestion in `require-meta-schema` rule ([#185](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/185)) ([afc1514](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/afc15149779647265b23ba8c4c181376eeb58795))
+* Check for meta type even when using a function reference ([#84](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/84)) ([38ad521](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/38ad521963b4e10d001ef91314a637c1028972cf))
+* check the type of the first arg of the old context.report() API ([29dc51c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/29dc51c81749dd66d6d6b1861f307d8bd6947b89))
+* clarify report messages for no-missing-placeholders and no-unused-placeholders ([#278](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/278)) ([f5a5c24](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/f5a5c2458e79c405f5a47c802dbca111301f635c))
+* correctly handle rules that are missing `meta` or have `meta` / `create` defined in variables ([#225](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/225)) ([badd4eb](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/badd4eb02621bd1a9b09aaf26b1bdc7b378ef899))
+* detect rules exported using a variable ([#233](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/233)) ([ae68f6b](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/ae68f6b2a593e4ddf16a7c7007b2c9990b5a4a4b))
+* detect rules with TypeScript `export = rule` syntax ([#267](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/267)) ([8e66bf7](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/8e66bf744448b8a3c64bf32c5ba893d16fa7f3ac))
+* don't use node protocol until we drop Node v14.17 support ([#315](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/315)) ([a5c0b0c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/a5c0b0ce6acd18545e202b15375f176c8b60e9a4))
+* Ensure `require-meta-*` rules test null/undefined property values ([#164](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/164)) ([990f8f6](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/990f8f6ab1bb7bf60939e2455ea3fae086bb90ae))
+* ensure rules bail out early when no rule present ([#293](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/293)) ([d1e03a1](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/d1e03a1b65ae37f2e842d802c87237217e9ff136))
+* export package.json (fixes [#270](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/270)) ([#271](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/271)) ([5cb12cc](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/5cb12cc5a01163966d506c7ee3c1b6c88c174ddb))
+* False negative in `prefer-message-ids` rule ([#173](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/173)) ([c5c4b62](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/c5c4b62be720768aeb13c55b003566d2c38211cb))
+* False negative with TypeScript rules that don't have type parameters (fixes [#202](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/202)) ([#209](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/209)) ([f8a642a](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/f8a642ac01fd153d5cde552a94d24371bae42e7c))
+* false positive with no-unused-message-ids from external violation reporting function ([#286](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/286)) ([01d0eef](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/01d0eef2885b1626642d925735c9cb59c1e611b8))
+* false positives in 5.4.0 for functions that aren't ESLint rules ([#451](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/451)) ([f3ec88e](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/f3ec88eedc450b4bab331557e93f7b48a36b5f11))
+* false positives with violation reporting helper function in `no-unused-message-ids` rule ([#290](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/290)) ([1c30165](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/1c301653a1bd120b121029c83d2d0914615cf9a5))
+* fix `require-meta-schema-description` rule crash ([8630901](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/8630901c4bb465e3f6041a819715f8d006385f10))
+* Fix false negatives and reporting location in `require-meta-type` ([#155](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/155)) ([7c0d1d0](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/7c0d1d06050d3e68de7623a81d4022886ae457a6))
+* Fix false positive with empty array variable in `require-meta-has-suggestions` rule ([#171](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/171)) ([fffa881](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/fffa881fdaf1575834832e0e16df2cddb913008c))
+* Handle `meta: {} as const` for TypeScript rules ([#219](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/219)) ([08df927](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/08df92755f45b7d8f16a9efc7dd7514cb1ab9cf2))
+* handle different rule file extensions like `.ts` in `require-meta-docs-url` rule ([#224](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/224)) ([6a09dbe](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6a09dbeb128d46a21b0b97f13d31af796f7e77b3))
+* handle spread in context.report() in require-meta-fixable ([#288](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/288)) ([d768112](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/d7681123fe78c64a87f52fb719e83bdb3995b7c6))
+* handle spread in context.report() in require-meta-has-suggestions ([#287](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/287)) ([fdffb50](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/fdffb501bf62e25bc59a2f960abb0bcc9327e81d))
+* handle spreads in rule meta objects ([#100](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/100)) ([45a09a6](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/45a09a67942c55230fcae893633c1911b089a514))
+* handle suggestions in helper function outside rule or inside nested spread/ternary in `require-meta-has-suggestions` rule ([#291](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/291)) ([aa133a9](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/aa133a93a95f401619325e22e96b432e40f34f57))
+* ignore function calls in `report-message-format` ([dea161d](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/dea161d6750b0c5fad88e5902ffc6f7421696f46))
+* ignore SpreadExpressions in no-only-tests and prefer-output-null ([4924042](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/49240423daef1cdba1e22d47136de2c693bfcafe))
+* Improve detection of fix functions that never return a fix in `fixer-return` rule ([#143](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/143)) ([65cfb2c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/65cfb2cd78484f2072bb1f150d07c6fa299579ed))
+* Improve detection of static `description` strings and ignore non-static descriptions in `require-meta-docs-description` rule ([#113](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/113)) ([1840a53](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/1840a53d98fd602feae20219d37510ecbe30fd74))
+* Improve detection of static `url` strings in `require-meta-docs-url` rule ([#162](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/162)) ([0459f12](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/0459f1288cda0174ec4622862d3e6d60eaff3889))
+* improve detection of static arguments of context.report() in several rules ([#129](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/129)) ([6d5be9f](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6d5be9fb3e2e4c4c19d0c20a8f4a33867573e3fa))
+* improve eslint rule detecting ([#457](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/457)) ([5dccb61](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/5dccb61cc8a732947689e523cfd9dd1adf611ca3))
+* Improve violation reporting location for `no-unused-placeholders` ([#279](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/279)) ([27c0b65](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/27c0b6558a9531c3b87a2776b1553adf29834e87))
+* incorrect category for consistent-output ([308b048](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/308b048140e65a2b3b39023df2ab9ea814e754b4))
+* incorrect no-deprecated-report-api autofix if &gt; 5 arguments passed ([2bd6cba](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/2bd6cba9209ea46eddbc33063c005b2586b96bd4))
+* linting errors. ([#23](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/23)) ([8d8526f](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/8d8526fe02ea5704469fb07df53970bcfdfeaec2))
+* no-deprecated-report-api should consider spread operator(fixes [#64](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/64)) ([#65](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/65)) ([ec7a34c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/ec7a34c562123b78494a256c3f233fc0ff759e50))
+* only autofix in require-meta-schema rule when no options present ([#184](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/184)) ([d2d165d](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/d2d165dd70686f77a7204f9e4bf7a048a5e42942))
+* Only consider functions with a single argument as function-style rules ([#213](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/213)) ([86bf1f9](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/86bf1f9acd100d9c6d91ac7c0dba8340afc75c7e))
+* prefer-output-null crashes, when a test case is not object. ([#22](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/22)) ([7c7c772](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/7c7c772f2cb1850eaf364d69a29e49f9c954479a))
+* Remove erroneous schema from require-meta-schema rule ([#178](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/178)) ([2f9b2b0](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/2f9b2b0671ebbcd3e76cf746d83371b131e375ac))
+* replace context.getScope() with sourceCode.getScope() ([6aed8bb](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6aed8bbc54abea5c74157c0e34148e56c88a6a7b))
+* report-message-format crash on reporting empty object ([f32ada6](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/f32ada66623eb54385afcbf4516931ad94de0336))
+* report-message-format crash when calling report() with no arguments ([292d141](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/292d141ef7ef949ac0e92deeb70b9d836b65935a))
+* reporting location in no-missing-placeholders ([#280](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/280)) ([31ff45c](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/31ff45c8840b90f575800ccbb7a35d1ba09c2ba8))
+* **require-meta-schema-description:** handle non-iterable schema properties ([#493](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/493)) ([7f99077](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/7f99077233b1de04f67a7b6bc5a38ace90c629db))
+* require-meta-type crash when has no meta property ([#73](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/73)) ([bc9b1a0](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/bc9b1a01cc3fcc9d115615c7e107f08c6bb0538c))
+* Rule can't find reference of `create` function ([#107](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/107)) ([eb501fc](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/eb501fc57efa602d2d57769e4d09cda2b24b53bf))
+* some rules crashing if tests array has missing elements (fixes [#35](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/35)). ([#36](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/36)) ([e3a14e1](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/e3a14e11d86836b1ab63d19c689327fea8f8a4bc))
+* support eslint v6 ([#172](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/172)) ([f7384ad](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/f7384ad76a0511cde29444256e16e9d273384cb0))
+* update `require-meta-schema` rule to allow object schemas (in addition to array schemas) ([#90](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/90)) ([e582cb6](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/e582cb61d0f51c15a8e5d9e38c82d1c73f2d6edd))
+* update fixer-return rule to handle arrow function expressions ([#144](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/144)) ([6762a3f](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/6762a3fa61fde2e9ae43576bd695d31da7ab5736))
+* update repo link ([#300](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/300)) ([07cd4ab](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/07cd4abb13002cb9f055b2aaf0f6110f0ee938b9))
+* use latest ECMAScript version in tests ([#364](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/364)) ([7be0c76](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/7be0c7641dba9c3250ca006a3baa75ff0d362128))
+* Use token utilities from eslint-utils ([#156](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/156)) ([5ac45f0](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/5ac45f08bb943c097d3d10ee088a4a8f4f8e4de8))
+
+
+### Performance Improvements
+
+* use improved comparison algorithm in `no-identical-tests` rule ([#337](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/issues/337)) ([b4da20a](https://github.com/michaelfaith/eslint-plugin-eslint-plugin/commit/b4da20a0d17cb4352ba2bc0e16519bf8f0015b92))
+
 ## [6.5.0](https://github.com/eslint-community/eslint-plugin-eslint-plugin/compare/v6.4.0...v6.5.0) (2025-06-18)
 
 
